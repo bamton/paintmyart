@@ -8,4 +8,4 @@
 - **Word Bank:** Jump, Crash, Fast, Goggles, Cold, Bark, Zoom
 
 ## Midjourney Prompt
-story writing page for kids, large empty drawing box at top with prompt "My Dog Snowboards", 5 wide lines below for writing, word bank at bottom: Jump, Crash, Fast, Goggles, Cold, Bark, Zoom, decorative winter theme border, clean layout for creative writing --ar 8.5:11
+story writing page for kids, large empty drawing box at top with prompt "My Dog Snowboards", 5 wide lines below for writing, word bank at bottom: Jump, Crash, Fast, Goggles, Cold, Bark, Zoom, decorative winter theme border, clean layout for creative writing --v 5.2 --style raw --ar 17:22 --q 2 --uplight

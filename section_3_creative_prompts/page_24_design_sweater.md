@@ -8,4 +8,4 @@
 - **Inkwell Tip:** Encourage pattern symmetry
 
 ## Midjourney Prompt
-sweater design activity for kids, large sweater outline filling most of page with faint grid pattern inside for guidance, decorative cuffs and collar, prompt "Design your own sweater!", some small pattern examples in corners, clean line art --ar 8.5:11
+sweater design activity for kids, large sweater outline filling most of page with faint grid pattern inside for guidance, decorative cuffs and collar, prompt "Design your own sweater!", some small pattern examples in corners, clean line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight

@@ -8,4 +8,4 @@
 - **Patterns:** Zig-zag, Stars, Stripes, Dots, Plaid
 
 ## Midjourney Prompt
-pattern matching activity for children, row of winter hats on left side with different patterns: zigzag, stars, stripes, dots, plaid, matching mittens on right side in random order, space for kids to draw connecting lines, colorful but clear line art --ar 8.5:11
+pattern matching activity for children, row of winter hats on left side with different patterns: zigzag, stars, stripes, dots, plaid, matching mittens on right side in random order, space for kids to draw connecting lines, colorful but clear line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight

@@ -8,4 +8,4 @@
 - **Key:** Only needed symbols provided
 
 ## Midjourney Prompt
-secret code puzzle for children, simple picture symbol cipher key at top showing symbols that represent letters, encoded message "YOU ARE COOL" using winter-themed symbols like snowflakes, mittens, hot cocoa cups, space below for kids to write decoded message, mysterious but kid-friendly design --ar 8.5:11
+secret code puzzle for children, simple picture symbol cipher key at top showing symbols that represent letters, encoded message "YOU ARE COOL" using winter-themed symbols like snowflakes, mittens, hot cocoa cups, space below for kids to write decoded message, mysterious but kid-friendly design --v 5.2 --style raw --ar 17:22 --q 2 --uplight

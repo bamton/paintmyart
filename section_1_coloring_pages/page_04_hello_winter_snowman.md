@@ -8,4 +8,4 @@
 - **Copy:** "HELLO WINTER!" (Bubble letters)
 
 ## Midjourney Prompt
-coloring page for toddlers, cute happy snowman with stick arms and carrot nose, wearing a scarf, simple thick lines, white background, low detail, vector style --ar 8.5:11
+coloring page for toddlers, cute happy snowman with stick arms and carrot nose, wearing a scarf and top hat, smiling, standing on flat snowy ground, minimal background, thick black outlines, no shading, no color, clean vector line art, white background --v 5.2 --style raw --ar 17:22 --q 2 --uplight

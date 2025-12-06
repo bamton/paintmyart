@@ -8,4 +8,4 @@
 - **Layout:** Bunny Top-Left, Glove Bottom-Right, thick paths, minimal false trails
 
 ## Midjourney Prompt
-maze activity page for children, cute bunny in top left corner, winter mitten glove in bottom right corner, thick paths, simple maze with minimal false trails, winter theme, clean line art --ar 8.5:11
+maze activity page for children, cute bunny in top left corner, winter mitten glove in bottom right corner, thick paths, simple maze with minimal false trails, winter theme, clean line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight

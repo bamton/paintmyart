@@ -9,4 +9,4 @@
 - **Bonus:** Add icons next to each word
 
 ## Midjourney Prompt
-word search puzzle for kids, 8x8 grid, winter food theme, clean layout with word list at bottom: COCOA, PIE, COOKIE, TEA, FUDGE, APPLE, SMORES, EGGNOG, simple decorative food icons next to each word, child-friendly design --ar 8.5:11
+word search puzzle for kids, 8x8 grid, winter food theme, clean layout with word list at bottom: COCOA, PIE, COOKIE, TEA, FUDGE, APPLE, SMORES, EGGNOG, simple decorative food icons next to each word, child-friendly design --v 5.2 --style raw --ar 17:22 --q 2 --uplight

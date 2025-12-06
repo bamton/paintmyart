@@ -8,4 +8,4 @@
 - **Bonus:** Add "My Closet" glue box
 
 ## Midjourney Prompt
-gender-neutral base figure, separate floating items: coat, wool hat, mittens, boots, scarf, thick outline for cutting --ar 8.5:11
+paper doll coloring page, gender-neutral child wearing base layer clothes, separate winter items: coat, hat, mittens, scarf, boots, large clear shapes, thick outlines, white background --v 5.2 --style raw --ar 17:22 --q 2 --uplight

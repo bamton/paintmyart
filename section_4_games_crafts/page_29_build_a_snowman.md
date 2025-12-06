@@ -9,4 +9,4 @@
 - **Activity:** Assemble with glue on construction paper
 
 ## Midjourney Prompt
-build-a-snowman craft template, three different sized snowball circles, separate carrot nose, buttons, top hat, stick arms, all pieces outlined for cutting, simple shapes for young children, decorative snow elements, assembly instructions --ar 8.5:11
+build a snowman paper craft cutout kit, three snowball body parts, top hat, carrot nose, stick arms, buttons, thick outlines, simple cartoon style, clean black and white line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight

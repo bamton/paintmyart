@@ -9,4 +9,4 @@
 - **Lines:** Solid = Cut, Dotted = Fold, Grey = Glue zone
 
 ## Midjourney Prompt
-3D paper craft template, cute penguin character "Puddles" broken into separate body parts for assembly, solid lines for cutting, dotted lines for folding, grey areas for gluing tabs, clear instructions, child-friendly craft project --ar 8.5:11
+coloring page template, paper craft parts for cartoon penguin, labeled body, wings, beak, feet, fold lines dotted, cut lines dashed, clean black and white vector line art, no shading --v 5.2 --style raw --ar 17:22 --q 2 --uplight

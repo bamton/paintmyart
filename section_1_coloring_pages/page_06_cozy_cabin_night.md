@@ -7,4 +7,4 @@
 - **Special Instructions:** Quiet, cozy scene
 
 ## Midjourney Prompt
-coloring page, log cabin in snow at night, smoke chimney, moon and stars, pine trees, medium detail, line art --ar 8.5:11
+coloring page, log cabin in snow at night, smoke coming from chimney, moon and stars in sky, pine trees, medium detail, cozy atmosphere, clean black and white vector line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight

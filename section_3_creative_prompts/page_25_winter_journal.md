@@ -8,4 +8,4 @@
 - **Layout:** 3 large boxes, each with drawing space + 1 sentence line
 
 ## Midjourney Prompt
-journal page for kids, "My Top 3 Favorite Things About Winter" title, 3 large numbered boxes arranged vertically, each box contains blank drawing space on top and a single writing line below, winter themed decorative elements, clean organized layout --ar 8.5:11
+journal page for kids, "My Top 3 Favorite Things About Winter" title, 3 large numbered boxes arranged vertically, each box contains blank drawing space on top and a single writing line below, winter themed decorative elements, clean organized layout --v 5.2 --style raw --ar 17:22 --q 2 --uplight

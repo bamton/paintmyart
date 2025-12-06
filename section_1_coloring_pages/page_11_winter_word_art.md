@@ -8,4 +8,4 @@
 - **Style:** Huge Bubble Letters, full-page stacking layout
 
 ## Midjourney Prompt
-Huge Bubble Letters, full-page stacking layout: HOT COCOA (Marshmallows in Os), SNOWY FUN (Icicles), SLED TIME (Speed lines) --ar 8.5:11
+coloring page, large bubble letters stacked: HOT COCOA, SNOWY FUN, SLED TIME, each styled with winter elements like marshmallows, icicles, speed lines, outlined font only --v 5.2 --style raw --ar 17:22 --q 2 --uplight

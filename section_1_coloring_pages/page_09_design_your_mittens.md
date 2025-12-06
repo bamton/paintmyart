@@ -8,4 +8,4 @@
 - **Sidebar:** "Stripes? Polka Dots? Tiny Snowmen?"
 
 ## Midjourney Prompt
-two large mitten outlines, one waving, one straight, thick borders --ar 8.5:11
+coloring page, two large blank mitten outlines, one tilted left, one straight, creative space inside, thick borders, no background, white space, clean line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight

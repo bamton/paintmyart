@@ -8,4 +8,4 @@
 - **Concept:** Number recognition
 
 ## Midjourney Prompt
-sleeping fox in snow, segmented sections, numbers 1–6 inside --ar 8.5:11
+color by number coloring page, sleeping fox curled in snow, clean segmented shapes, numbers inside areas, clean black and white vector line art --v 5.2 --style raw --ar 17:22 --q 2 --uplight
