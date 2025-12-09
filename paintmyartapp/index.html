@@ -3,295 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Perfect Winter Gift for Children - 75 Coloring Pages</title>
-    <meta name="description" content="Keep children engaged all winter long. 75 premium coloring pages. The thoughtful gift that never stops giving.">
+    <title>Winter Survival Kit - 70+ Coloring Pages & Puzzles for Kids</title>
+    <meta name="description" content="The ultimate Winter Survival Kit with 70+ coloring pages and word search puzzles. Dinosaurs, princesses, space, winter themes & more. Instant PDF download, print unlimited copies.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Clash+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0891b2',
+                        secondary: '#06b6d4',
+                        accent: '#22d3ee',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Clash Display', 'Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'gradient-y': 'gradient-y 15s ease infinite',
+                        'gradient-xy': 'gradient-xy 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-reverse': 'float-reverse 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'shimmer': 'shimmer 3s linear infinite',
+                        'orbit': 'orbit 20s linear infinite',
+                        'morph': 'morph 8s ease-in-out infinite',
+                        'glitch': 'glitch 2s linear infinite',
+                        'slide-in': 'slide-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                        'scale-in': 'scale-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                        'rotate-3d': 'rotate-3d 10s linear infinite',
+                        'bounce-gentle': 'bounce-gentle 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-darker text-white overflow-x-hidden">
+    <!-- Animated Background Canvas -->
+    <canvas id="bgCanvas" class="fixed inset-0 w-full h-full pointer-events-none"></canvas>
+
+    <!-- Gradient Orbs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl animate-float-reverse"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-full blur-3xl animate-pulse-glow"></div>
+    </div>
+
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <span class="logo">PAINT MY ART</span>
-                <span class="tagline">The Gift That Inspires</span>
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="header">
+        <div class="absolute inset-0 bg-darker/80 backdrop-blur-2xl border-b border-white/5"></div>
+        <div class="relative max-w-7xl mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center transform hover:rotate-12 transition-transform">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                    </div>
+                    <div>
+                        <h1 class="font-display font-black text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Winter Kit</h1>
+                        <p class="text-xs text-gray-400 font-medium tracking-wider">CREATIVE ACTIVITIES</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors font-medium">Features</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-white transition-colors font-medium">Gallery</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white transition-colors font-medium">Pricing</a>
+                    <button class="px-5 py-2 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold text-white hover:shadow-lg hover:shadow-primary/25 transition-all">
+                        Get Access
+                    </button>
+                </nav>
+                <button class="md:hidden w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center" id="mobileMenuBtn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="winter-badge">WINTER 2025</div>
-                    <h1>The Perfect Screen-Free Activity for Creative Kids</h1>
-                    <p class="subtitle">75 carefully designed coloring pages that engage young minds. Watch their creativity soar while they develop essential skills.</p>
-                    <div class="value-prop">
-                        <div class="price-highlight">
-                            <span class="original-was">Was $24.99</span>
-                            <span class="now-price">Only $9.00</span>
+    <section class="relative min-h-screen flex items-center justify-center pt-20" id="hero">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8 animate-slide-in">
+                    <!-- Animated Badge -->
+                    <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-md rounded-full border border-primary/20 group">
+                        <div class="relative">
+                            <div class="w-3 h-3 bg-accent rounded-full"></div>
+                            <div class="absolute inset-0 w-3 h-3 bg-accent rounded-full animate-ping"></div>
                         </div>
-                        <p class="urgency">Limited edition winter collection - Order before they're gone</p>
-                    </div>
-                    <a href="https://buy.stripe.com/dRm3cvfRS1xYfnmdkX7Re00" class="cta-button" target="_blank">ORDER NOW - INSTANT DELIVERY</a>
-                    <div class="trust-badges">
-                        <span class="badge">✓ Instant Download</span>
-                        <span class="badge">✓ Print Forever</span>
-                        <span class="badge">✓ 30-Day Guarantee</span>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="preview-stack">
-                        <div class="preview-item active">
-                            <img src="samples/01-christmas-tree.png" alt="Christmas Tree">
-                        </div>
-                        <div class="preview-item">
-                            <img src="samples/44-princess.png" alt="Princess">
-                        </div>
-                        <div class="preview-item">
-                            <img src="samples/59-cupcake.png" alt="Cupcake">
-                        </div>
-                    </div>
-                    <div class="preview-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <div class="problem-content">
-                <h2>Winter Is Coming. Are You Ready?</h2>
-                <div class="pain-points">
-                    <div class="pain-point">
-                        <div class="icon">❄️</div>
-                        <h3>Too Much Indoor Time</h3>
-                        <p>Keep them engaged when outdoor play isn't an option</p>
-                    </div>
-                    <div class="pain-point">
-                        <div class="icon">📱</div>
-                        <h3>Screen Addiction</h3>
-                        <p>Provide a healthy alternative to digital entertainment</p>
-                    </div>
-                    <div class="pain-point">
-                        <div class="icon">🎁</div>
-                        <h3>Meaningful Gifts</h3>
-                        <p>Give something that truly impacts their development</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="solution">
-        <div class="container">
-            <div class="solution-header">
-                <h2>The Solution Every Parent Wishes They Had</h2>
-                <p class="subheader">Thoughtfully designed to nurture creativity and provide peaceful moments</p>
-            </div>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-number">75</div>
-                    <h3>Unique Designs</h3>
-                    <p>No repeats. Every page brings a new adventure</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-number">5-9</div>
-                    <h3>Perfect Age Range</h3>
-                    <p>Complexity that grows with their skills</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-number">∞</div>
-                    <h3>Unlimited Prints</h3>
-                    <p>One purchase. Endless creativity for all your children</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Preview -->
-    <section class="gallery">
-        <div class="container">
-            <h2>What They'll Discover Inside</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="samples/02-snowman.png" alt="Snowman">
-                    <div class="overlay">
-                        <span>Winter Magic</span>
-                        <small>15 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/02-snowman.png', 'Snowman')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item">
-                    <img src="samples/03-gingerbread-house.png" alt="Gingerbread House">
-                    <div class="overlay">
-                        <span>Holiday Adventures</span>
-                        <small>20 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/03-gingerbread-house.png', 'Gingerbread House')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item">
-                    <img src="samples/47-pirate.png" alt="Pirate">
-                    <div class="overlay">
-                        <span>Brave Explorers</span>
-                        <small>15 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/47-pirate.png', 'Pirate')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item">
-                    <img src="samples/57-rocket-in-space.png" alt="Rocket">
-                    <div class="overlay">
-                        <span>Space Dreams</span>
-                        <small>10 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/57-rocket-in-space.png', 'Rocket')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item">
-                    <img src="samples/44-princess.png" alt="Princess">
-                    <div class="overlay">
-                        <span>Royal Dreams</span>
-                        <small>15 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/44-princess.png', 'Princess')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item">
-                    <img src="samples/59-cupcake.png" alt="Cupcake">
-                    <div class="overlay">
-                        <span>Yummy Creations</span>
-                        <small>15 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/59-cupcake.png', 'Cupcake')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item">
-                    <img src="samples/61-rainbow.png" alt="Rainbow">
-                    <div class="overlay">
-                        <span>Nature Magic</span>
-                        <small>10 pages</small>
-                    </div>
-                    <button class="print-btn" onclick="printImage('samples/61-rainbow.png', 'Rainbow')">
-                        <span class="print-icon">🖨️</span>
-                        Print Sample
-                    </button>
-                </div>
-                <div class="gallery-item more">
-                    <div class="more-content">
-                        <span class="big-number">+68</span>
-                        <span class="more-text">More Adventures</span>
-                        <p>Dinosaurs, castles, animals & more</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <h2>More Than Just Coloring. It's Development.</h2>
-            <div class="benefits-grid">
-                <div class="benefit">
-                    <h3>Fine Motor Skills</h3>
-                    <p>Each stroke builds coordination and control they'll use for life</p>
-                </div>
-                <div class="benefit">
-                    <h3>Focus & Patience</h3>
-                    <p>Teaches concentration - a skill that translates to school success</p>
-                </div>
-                <div class="benefit">
-                    <h3>Creative Expression</h3>
-                    <p>Builds confidence as they make every creation uniquely theirs</p>
-                </div>
-                <div class="benefit">
-                    <h3>Quiet Time</h3>
-                    <p>Provides peaceful moments for you and engaged time for them</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Order Section -->
-    <section class="order" id="order">
-        <div class="container">
-            <div class="order-content">
-                <div class="order-left">
-                    <h2>The Complete Collection</h2>
-                    <div class="price-tag">
-                        <span class="price">$9.00</span>
-                        <span class="price-desc">One-time payment</span>
-                    </div>
-                    <p class="value-message">75 coloring pages + bonus word search puzzles</p>
-
-                    <div class="features-list">
-                        <div class="feature-item">
-                            <span class="icon">🎨</span>
-                            <span>75 Premium Coloring Pages</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="icon">🧩</span>
-                            <span>Word Search Puzzles Collection</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="icon">📄</span>
-                            <span>Print Unlimited Copies</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="icon">⏱️</span>
-                            <span>Instant Digital Download</span>
-                        </div>
+                        <span class="text-sm font-bold text-accent">LIMITED TIME: 64% OFF</span>
+                        <svg class="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
                     </div>
 
-                    <a href="https://buy.stripe.com/dRm3cvfRS1xYfnmdkX7Re00" class="order-btn" target="_blank">Order Now - $9.00</a>
-
-                    <div class="payment-info">
-                        <div class="cards-accepted">
-                            <img src="data:image/svg+xml,%3Csvg width='40' height='25' viewBox='0 0 40 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='25' rx='2' fill='%2314354E'/%3E%3Cpath d='M8 8h6v9H8V8z' fill='white'/%3E%3Cpath d='M16 8h6v9h-6V8z' fill='%23EB001B'/%3E%3Cpath d='M14 8h2v9h-2V8z' fill='%23F79E1B'/%3E%3C/svg%3E" alt="Visa">
-                            <img src="data:image/svg+xml,%3Csvg width='40' height='25' viewBox='0 0 40 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='25' rx='2' fill='%23EB001B'/%3E%3Ccircle cx='15' cy='12.5' r='7' fill='%23F79E1B'/%3E%3Ccircle cx='25' cy='12.5' r='7' fill='%23EB001B'/%3E%3C/svg%3E" alt="Mastercard">
-                            <img src="data:image/svg+xml,%3Csvg width='40' height='25' viewBox='0 0 40 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='25' rx='2' fill='%23006FCF'/%3E%3Ctext x='20' y='17' font-family='Arial' font-size='10' fill='white' text-anchor='middle'%3EAMEX%3C/text%3E%3C/svg%3E" alt="Amex">
-                            <img src="data:image/svg+xml,%3Csvg width='40' height='25' viewBox='0 0 40 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='25' rx='2' fill='%23009CDE'/%3E%3Ctext x='20' y='17' font-family='Arial' font-size='10' fill='white' text-anchor='middle'%3EPayPal%3C/text%3E%3C/svg%3E" alt="PayPal">
-                        </div>
-                        <p class="secure-text">Secure checkout • Instant access</p>
+                    <!-- Main Heading with Glitch Effect -->
+                    <div class="relative">
+                        <h2 class="font-display font-black text-5xl lg:text-7xl leading-[1.1]">
+                            <span class="block text-white/90">Transform</span>
+                            <span class="block bg-gradient-to-r from-primary via-secondary to-accent bg-gradient-to-r bg-clip-text text-transparent animate-gradient-x">Winter Boredom</span>
+                            <span class="block text-white/90">Into Creative</span>
+                            <span class="block bg-gradient-to-r from-accent via-primary to-secondary bg-gradient-to-r bg-clip-text text-transparent animate-gradient-y">Magic</span>
+                        </h2>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary blur opacity-20 animate-pulse"></div>
                     </div>
-                </div>
 
-                <div class="order-right">
-                    <div class="preview-box">
-                        <h3>Try Free Samples</h3>
-                        <div class="sample-grid">
-                            <div class="sample-item" onclick="printImage('samples/02-snowman.png', 'Snowman')">
-                                <img src="samples/02-snowman.png" alt="Sample">
-                                <span class="sample-label">Print Sample</span>
+                    <p class="text-xl text-gray-300 leading-relaxed max-w-lg">
+                        Discover the ultimate digital coloring collection with 70+ premium pages and puzzles. From dinosaurs to space adventures, watch your child's creativity soar this winter.
+                    </p>
+
+                    <!-- 3D Price Card -->
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                        <div class="relative bg-darker/90 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
+                            <div class="flex items-baseline gap-4 mb-3">
+                                <span class="text-3xl font-bold text-gray-500 line-through">$24.99</span>
+                                <div class="flex items-baseline">
+                                    <span class="text-7xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">$9</span>
+                                    <span class="text-3xl text-gray-400">.00</span>
+                                </div>
                             </div>
-                            <div class="sample-item" onclick="window.open('samples/word-search.png', '_blank')">
-                                <img src="samples/word-search.png" alt="Word Search">
-                                <span class="sample-label">View Word Search</span>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 bg-accent/20 text-accent text-sm font-bold rounded-full animate-pulse">TODAY ONLY</span>
+                                <span class="text-gray-400">• Save $15.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://buy.stripe.com/dRm3cvfRS1xYfnmdkX7Re00"
+                           class="group relative overflow-hidden px-12 py-5 bg-gradient-to-r from-primary to-secondary rounded-2xl font-black text-xl text-white transition-all hover:shadow-2xl hover:shadow-primary/50 hover:scale-105"
+                           target="_blank">
+                            <div class="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity animate-shimmer"></div>
+                            <span class="relative flex items-center justify-center gap-3">
+                                GET INSTANT ACCESS
+                                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <button class="group px-8 py-5 bg-white/10 backdrop-blur-xl rounded-2xl font-bold text-white border border-white/20 hover:bg-white/20 transition-all hover:scale-105">
+                            <span class="flex items-center gap-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Watch Demo
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
+                        <div class="text-center group cursor-pointer">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm text-gray-400">Instant Download</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm text-gray-400">70+ Pages</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm text-gray-400">Print Forever</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D Product Showcase -->
+                <div class="relative lg:sticky lg:top-20 h-fit">
+                    <div class="relative" style="perspective: 2000px;">
+                        <!-- Main 3D Rotating Card -->
+                        <div class="relative preserve-3d animate-rotate-3d" id="productShowcase">
+                            <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-1 shadow-2xl">
+                                <div class="bg-white rounded-2xl p-8 overflow-hidden">
+                                    <div class="relative">
+                                        <img src="samples/01-christmas-tree.png" alt="Christmas Tree" class="w-full h-full object-contain filter drop-shadow-lg">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Orbs with Info -->
+                            <div class="absolute -top-12 -right-12 w-32 h-32 group cursor-pointer">
+                                <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                                <div class="relative w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full flex flex-col items-center justify-center animate-float">
+                                    <span class="text-3xl font-black text-white">70+</span>
+                                    <span class="text-xs font-bold text-white/90">PAGES</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute top-1/2 -left-16 w-28 h-28 group cursor-pointer">
+                                <div class="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                                <div class="relative w-28 h-28 bg-gradient-to-br from-secondary to-accent rounded-full flex flex-col items-center justify-center animate-float-reverse">
+                                    <span class="text-2xl font-black text-white">3</span>
+                                    <span class="text-xs font-bold text-white/90">PUZZLES</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute -bottom-10 right-10 w-24 h-24 group cursor-pointer">
+                                <div class="absolute inset-0 bg-gradient-to-br from-accent to-primary rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                                <div class="relative w-24 h-24 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center animate-bounce-gentle">
+                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Decorative Elements -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl animate-morph opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="relative py-32 bg-dark" id="features">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-display font-black text-4xl lg:text-6xl mb-6">
+                    What's Inside
+                    <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">The Kit</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Every theme carefully crafted to captivate young minds and nurture creativity
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Cards -->
+                <div class="group relative bg-gradient-to-br from-darker to-dark rounded-3xl p-8 border border-white/5 hover:border-primary/50 transition-all hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute -inset-px bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative">
+                        <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="text-3xl font-black text-white">21</span>
+                        </div>
+                        <h3 class="font-display font-black text-2xl mb-3">Christmas Magic</h3>
+                        <p class="text-primary font-bold text-lg mb-4">Pages</p>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                Christmas Trees
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                Snowmen
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                Gingerbread Houses
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="group relative bg-gradient-to-br from-darker to-dark rounded-3xl p-8 border border-white/5 hover:border-primary/50 transition-all hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute -inset-px bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="text-3xl font-black text-white">8</span>
+                        </div>
+                        <h3 class="font-display font-black text-2xl mb-3">Dino Adventure</h3>
+                        <p class="text-primary font-bold text-lg mb-4">Pages</p>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                T-Rex
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                Brontosaurus
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                Triceratops
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="group relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8 border border-primary/20 hover:border-primary/40 transition-all hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute -inset-px bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform animate-pulse">
+                            <span class="text-3xl font-black text-white">BONUS</span>
+                        </div>
+                        <h3 class="font-display font-black text-2xl mb-3">Word Puzzles</h3>
+                        <p class="text-white font-bold text-lg mb-4">3 Levels</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-sm font-bold text-white">1</span>
+                                </div>
+                                <span class="text-gray-300">Easy Kids</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-sm font-bold text-white">2</span>
+                                </div>
+                                <span class="text-gray-300">Family</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-sm font-bold text-white">3</span>
+                                </div>
+                                <span class="text-gray-300">Expert</span>
                             </div>
                         </div>
                     </div>
@@ -300,27 +353,142 @@
         </div>
     </section>
 
-    <!-- Urgency Section -->
-    <section class="urgency">
-        <div class="container">
-            <div class="urgency-content">
-                <h2>The Perfect Winter Activity Is One Click Away</h2>
-                <p>Keep kids engaged and creative all season long with screen-free fun.</p>
-                <a href="https://buy.stripe.com/dRm3cvfRS1xYfnmdkX7Re00" class="final-cta" target="_blank">GET INSTANT ACCESS NOW</a>
+    <!-- Interactive Gallery -->
+    <section class="relative py-32 bg-gradient-to-b from-dark to-darker" id="gallery">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-display font-black text-4xl lg:text-6xl mb-6">
+                    See the
+                    <span class="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Magic</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Click any sample to print and try at home
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Gallery Items -->
+                <div class="gallery-item group relative aspect-square bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden cursor-pointer" onclick="printImage('samples/02-snowman.png', 'Snowman')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="samples/02-snowman.png" alt="Snowman" class="w-full h-full object-contain p-6 transition-transform group-hover:scale-110 duration-500">
+                    <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white font-bold text-lg">Snowman</h3>
+                            <p class="text-gray-300 text-sm">Winter Collection</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/20 hover:scale-110">
+                        <svg class="w-5 h-5 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="gallery-item group relative aspect-square bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl p-8 flex flex-col items-center justify-center text-white cursor-pointer hover:scale-105 transition-all">
+                    <div class="text-6xl font-black mb-4 group-hover:scale-110 transition-transform">+63</div>
+                    <h3 class="font-display font-black text-2xl text-center mb-2">More Pages</h3>
+                    <p class="text-white/80 text-center">Unlock the complete collection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="relative py-32 bg-gradient-to-b from-dark to-darker" id="pricing">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-display font-black text-4xl lg:text-6xl mb-6">
+                    Get Instant Access
+                    <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Today</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    One-time payment, lifetime access. Print as many copies as you need for all your kids.
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="relative group">
+                    <!-- Glow Effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+
+                    <!-- Main Pricing Card -->
+                    <div class="relative bg-darker rounded-3xl p-12 border border-white/10">
+                        <!-- Badge -->
+                        <div class="flex justify-center mb-8">
+                            <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-full">
+                                <div class="relative">
+                                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                                    <div class="absolute inset-0 w-2 h-2 bg-white rounded-full animate-ping"></div>
+                                </div>
+                                <span class="font-bold text-white">Limited Time: 64% OFF</span>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-12">
+                            <div class="flex items-baseline justify-center gap-4 mb-4">
+                                <span class="text-4xl font-bold text-gray-500 line-through">$24.99</span>
+                                <div class="flex items-baseline">
+                                    <span class="text-8xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">$9</span>
+                                    <span class="text-4xl font-bold text-gray-300">.00</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-lg">One-time payment • Lifetime access • No subscriptions</p>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="https://buy.stripe.com/dRm3cvfRS1xYfnmdkX7Re00"
+                           class="block w-full group relative overflow-hidden px-12 py-6 bg-gradient-to-r from-primary to-secondary rounded-2xl font-black text-2xl text-white transition-all hover:shadow-2xl hover:shadow-primary/50 hover:scale-105"
+                           target="_blank">
+                            <div class="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity animate-shimmer"></div>
+                            <span class="relative flex items-center justify-center gap-3">
+                                GET MY KIT NOW - $9
+                                <svg class="w-7 h-7 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <!-- Payment & Security -->
+                        <div class="mt-8 flex items-center justify-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                                <span class="text-gray-400">Secure Payment</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <span class="text-gray-400">Instant Access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Paint My Art. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#contact">Contact</a>
-                    <a href="#terms">Terms</a>
-                    <a href="#privacy">Privacy</a>
+    <footer class="relative py-12 bg-darker border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-display font-black text-xl text-white">Winter Kit</span>
                 </div>
+
+                <nav class="flex items-center gap-8">
+                    <a href="#terms" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+                    <a href="#privacy" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+
+                <p class="text-gray-400 text-sm">© 2025 Paint My Art. All rights reserved.</p>
             </div>
         </div>
     </footer>
